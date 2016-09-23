@@ -34,7 +34,6 @@ public class ServletCalculator extends HttpServlet {
             digit = " ";
         }
 
-
         if ((historyAction == null) && !(action.equals("equally"))) {
             session.setAttribute("historyAction", action);
         }
