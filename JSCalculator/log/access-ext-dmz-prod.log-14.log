@@ -1,0 +1,606 @@
+0      2016-09-14 09:33:08,570 INFO            ru.itis2016.TestEncodinServlet  - Text that was added to session: null
+5480   2016-09-14 09:33:14,050 DEBUG           ru.itis2016.TestEncodinServlet  - Cookies added 45
+9353   2016-09-14 09:33:17,923 DEBUG           ru.itis2016.TestEncodinServlet  - Cookies added 54
+0      2016-09-14 09:50:18,952 DEBUG           ru.itis2016.TestEncodinServlet  - Cookies added 54
+5388   2016-09-14 09:50:24,340 INFO              ru.itis2016.ServletCalculate  - Text that was added to session: null
+424275 2016-09-14 09:57:23,227 DEBUG           ru.itis2016.TestEncodinServlet  - Cookies added 45
+427273 2016-09-14 09:57:26,225 DEBUG           ru.itis2016.TestEncodinServlet  - Cookies added 34
+0      2016-09-14 10:03:44,715 DEBUG             ru.itis2016.ServletCalculate  - Cookies added 34
+7306   2016-09-14 10:03:52,021 INFO              ru.itis2016.ServletCalculate  - Text that was added to session: null
+18743  2016-09-14 10:04:03,458 INFO            ru.itis2016.TestEncodinServlet  - Text that was added to session: null
+32984  2016-09-14 10:04:17,699 DEBUG           ru.itis2016.TestEncodinServlet  - Cookies added 54
+35007  2016-09-14 10:04:19,722 DEBUG             ru.itis2016.ServletCalculate  - Cookies added 54
+0      2016-09-14 10:07:27,492 INFO            ru.itis2016.TestEncodinServlet  - Text that was added to session: null
+9380   2016-09-14 10:07:36,872 INFO              ru.itis2016.ServletCalculate  - Text that was added to session: null
+0      2016-09-14 10:12:02,381 INFO            ru.itis2016.TestEncodinServlet  - Text that was added to session: null
+12253  2016-09-14 10:12:14,634 INFO              ru.itis2016.ServletCalculate  - Text that was added to session: null
+0      2016-09-14 10:16:41,754 INFO            ru.itis2016.TestEncodinServlet  - Text that was added to session: null
+33556  2016-09-14 10:17:15,310 INFO              ru.itis2016.ServletCalculate  - Text that was added to session: null
+36072  2016-09-14 10:17:17,826 DEBUG             ru.itis2016.ServletCalculate  - Cookies added 5
+39406  2016-09-14 10:17:21,160 DEBUG             ru.itis2016.ServletCalculate  - Cookies added 4
+0      2016-09-14 10:21:40,256 INFO              ru.itis2016.ServletCalculate  - Text that was added to session: null
+8880   2016-09-14 10:21:49,136 INFO            ru.itis2016.TestEncodinServlet  - Text that was added to session: null
+10698  2016-09-14 10:21:50,954 DEBUG           ru.itis2016.TestEncodinServlet  - Cookies added 5
+0      2016-09-14 10:26:14,990 INFO              ru.itis2016.ServletCalculate  - Text that was added to session: null
+12868  2016-09-14 10:26:27,858 INFO              ru.itis2016.ServletCalculate  - Text that was added to session: null
+0      2016-09-14 10:33:08,481 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+0      2016-09-14 10:34:03,208 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+0      2016-09-14 10:37:39,228 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+1758   2016-09-14 10:37:40,986 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+3319   2016-09-14 10:37:42,547 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 34
+0      2016-09-14 10:40:45,230 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2005   2016-09-14 10:40:47,235 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+3997   2016-09-14 10:40:49,227 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 43
+1      2016-09-14 10:41:27,714 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2060   2016-09-14 10:41:29,773 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+0      2016-09-14 10:47:33,062 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+7668   2016-09-14 10:47:40,730 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 3
+0      2016-09-14 10:52:59,230 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+4294   2016-09-14 10:53:03,524 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+0      2016-09-14 11:01:39,375 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+10912  2016-09-14 11:01:50,287 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 33
+42008  2016-09-14 11:02:21,383 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 43
+0      2016-09-14 11:11:19,808 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 11:11:19,810 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+7564   2016-09-14 11:11:27,372 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+7566   2016-09-14 11:11:27,374 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+85556  2016-09-14 11:12:45,364 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+85557  2016-09-14 11:12:45,365 DEBUG            ru.itis2016.ServletCalculator  - Cookies added null
+163211 2016-09-14 11:14:03,019 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+163212 2016-09-14 11:14:03,020 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+213207 2016-09-14 11:14:53,015 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+213207 2016-09-14 11:14:53,015 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+226090 2016-09-14 11:15:05,898 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+226090 2016-09-14 11:15:05,898 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+229036 2016-09-14 11:15:08,844 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 6
+229037 2016-09-14 11:15:08,845 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+0      2016-09-14 11:21:32,486 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+5      2016-09-14 11:21:32,491 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+48344  2016-09-14 11:22:20,830 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+48344  2016-09-14 11:22:20,830 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+58626  2016-09-14 11:22:31,112 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 12
+58626  2016-09-14 11:22:31,112 DEBUG            ru.itis2016.ServletCalculator  - Cookies added null
+62741  2016-09-14 11:22:35,227 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 15
+62741  2016-09-14 11:22:35,227 DEBUG            ru.itis2016.ServletCalculator  - Cookies added null
+321222 2016-09-14 11:26:53,708 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+321224 2016-09-14 11:26:53,710 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+326806 2016-09-14 11:26:59,292 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+326807 2016-09-14 11:26:59,293 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+331705 2016-09-14 11:27:04,191 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 7
+331705 2016-09-14 11:27:04,191 DEBUG            ru.itis2016.ServletCalculator  - Cookies added null
+0      2016-09-14 11:38:29,254 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 11:38:29,256 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+5494   2016-09-14 11:38:34,748 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+5498   2016-09-14 11:38:34,752 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+5499   2016-09-14 11:38:34,753 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+5499   2016-09-14 11:38:34,753 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+5500   2016-09-14 11:38:34,754 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+9675   2016-09-14 11:38:38,929 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+9676   2016-09-14 11:38:38,930 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+9676   2016-09-14 11:38:38,930 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+9677   2016-09-14 11:38:38,931 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+9677   2016-09-14 11:38:38,931 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+14757  2016-09-14 11:38:44,011 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+14757  2016-09-14 11:38:44,011 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+14757  2016-09-14 11:38:44,011 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+14757  2016-09-14 11:38:44,011 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+14757  2016-09-14 11:38:44,011 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15251  2016-09-14 11:38:44,505 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+15257  2016-09-14 11:38:44,511 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15258  2016-09-14 11:38:44,512 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15258  2016-09-14 11:38:44,512 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+15258  2016-09-14 11:38:44,512 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15405  2016-09-14 11:38:44,659 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+15405  2016-09-14 11:38:44,659 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15405  2016-09-14 11:38:44,659 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15405  2016-09-14 11:38:44,659 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+15405  2016-09-14 11:38:44,659 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15565  2016-09-14 11:38:44,819 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+15565  2016-09-14 11:38:44,819 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15570  2016-09-14 11:38:44,824 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15570  2016-09-14 11:38:44,824 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+15570  2016-09-14 11:38:44,824 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15709  2016-09-14 11:38:44,963 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+15709  2016-09-14 11:38:44,963 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15709  2016-09-14 11:38:44,963 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15709  2016-09-14 11:38:44,963 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+15709  2016-09-14 11:38:44,963 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15861  2016-09-14 11:38:45,115 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+15863  2016-09-14 11:38:45,117 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15863  2016-09-14 11:38:45,117 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+15863  2016-09-14 11:38:45,117 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+15863  2016-09-14 11:38:45,117 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+19681  2016-09-14 11:38:48,935 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+19682  2016-09-14 11:38:48,936 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+19682  2016-09-14 11:38:48,936 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+19682  2016-09-14 11:38:48,936 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+19682  2016-09-14 11:38:48,936 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+23041  2016-09-14 11:38:52,295 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 3
+23041  2016-09-14 11:38:52,295 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+23041  2016-09-14 11:38:52,295 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+23041  2016-09-14 11:38:52,295 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 3
+23041  2016-09-14 11:38:52,295 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+29298  2016-09-14 11:38:58,552 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+29298  2016-09-14 11:38:58,552 DEBUG            ru.itis2016.ServletCalculator  - Cookies added multiplication
+29298  2016-09-14 11:38:58,552 DEBUG            ru.itis2016.ServletCalculator  - Cookies added multiplication
+29298  2016-09-14 11:38:58,552 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+29298  2016-09-14 11:38:58,552 DEBUG            ru.itis2016.ServletCalculator  - Cookies added multiplication
+30012  2016-09-14 11:38:59,266 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+30012  2016-09-14 11:38:59,266 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+30012  2016-09-14 11:38:59,266 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+30013  2016-09-14 11:38:59,267 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+30013  2016-09-14 11:38:59,267 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+30388  2016-09-14 11:38:59,642 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+30388  2016-09-14 11:38:59,642 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+30389  2016-09-14 11:38:59,643 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+30389  2016-09-14 11:38:59,643 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+30389  2016-09-14 11:38:59,643 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+30965  2016-09-14 11:39:00,219 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+30965  2016-09-14 11:39:00,219 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+30966  2016-09-14 11:39:00,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+30966  2016-09-14 11:39:00,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+30966  2016-09-14 11:39:00,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+31243  2016-09-14 11:39:00,497 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+31244  2016-09-14 11:39:00,498 DEBUG            ru.itis2016.ServletCalculator  - Cookies added multiplication
+31244  2016-09-14 11:39:00,498 DEBUG            ru.itis2016.ServletCalculator  - Cookies added multiplication
+31244  2016-09-14 11:39:00,498 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+31244  2016-09-14 11:39:00,498 DEBUG            ru.itis2016.ServletCalculator  - Cookies added multiplication
+31506  2016-09-14 11:39:00,760 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+31506  2016-09-14 11:39:00,760 DEBUG            ru.itis2016.ServletCalculator  - Cookies added multiplication
+31507  2016-09-14 11:39:00,761 DEBUG            ru.itis2016.ServletCalculator  - Cookies added multiplication
+31507  2016-09-14 11:39:00,761 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+31507  2016-09-14 11:39:00,761 DEBUG            ru.itis2016.ServletCalculator  - Cookies added multiplication
+33228  2016-09-14 11:39:02,482 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+33228  2016-09-14 11:39:02,482 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+33228  2016-09-14 11:39:02,482 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+33228  2016-09-14 11:39:02,482 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+33228  2016-09-14 11:39:02,482 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+33972  2016-09-14 11:39:03,226 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+33973  2016-09-14 11:39:03,227 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+33973  2016-09-14 11:39:03,227 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+33973  2016-09-14 11:39:03,227 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+33973  2016-09-14 11:39:03,227 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+0      2016-09-14 11:41:50,802 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 11:41:50,804 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+3888   2016-09-14 11:41:54,690 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+3888   2016-09-14 11:41:54,690 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+3888   2016-09-14 11:41:54,690 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+3888   2016-09-14 11:41:54,690 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+3888   2016-09-14 11:41:54,690 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+13733  2016-09-14 11:42:04,535 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+13737  2016-09-14 11:42:04,539 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+17883  2016-09-14 11:42:08,685 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+17883  2016-09-14 11:42:08,685 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+17883  2016-09-14 11:42:08,685 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+17883  2016-09-14 11:42:08,685 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+17884  2016-09-14 11:42:08,686 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+17884  2016-09-14 11:42:08,686 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+23616  2016-09-14 11:42:14,418 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 6
+23616  2016-09-14 11:42:14,418 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+23616  2016-09-14 11:42:14,418 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 6
+23617  2016-09-14 11:42:14,419 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+23618  2016-09-14 11:42:14,420 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 6
+23618  2016-09-14 11:42:14,420 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+26715  2016-09-14 11:42:17,517 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+26715  2016-09-14 11:42:17,517 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+26715  2016-09-14 11:42:17,517 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+26715  2016-09-14 11:42:17,517 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+26715  2016-09-14 11:42:17,517 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+26715  2016-09-14 11:42:17,517 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+274422 2016-09-14 11:46:25,224 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+274422 2016-09-14 11:46:25,224 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+274423 2016-09-14 11:46:25,225 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+274429 2016-09-14 11:46:25,231 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+274429 2016-09-14 11:46:25,231 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+280338 2016-09-14 11:46:31,140 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 6
+280338 2016-09-14 11:46:31,140 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+280338 2016-09-14 11:46:31,140 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 6
+280339 2016-09-14 11:46:31,141 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+280339 2016-09-14 11:46:31,141 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 6
+280339 2016-09-14 11:46:31,141 DEBUG            ru.itis2016.ServletCalculator  - Cookies added equally
+310257 2016-09-14 11:47:01,059 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+310257 2016-09-14 11:47:01,059 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+310257 2016-09-14 11:47:01,059 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+310257 2016-09-14 11:47:01,059 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+310257 2016-09-14 11:47:01,059 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+310257 2016-09-14 11:47:01,059 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+313222 2016-09-14 11:47:04,024 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+313223 2016-09-14 11:47:04,025 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+313223 2016-09-14 11:47:04,025 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+313223 2016-09-14 11:47:04,025 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+313223 2016-09-14 11:47:04,025 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+313223 2016-09-14 11:47:04,025 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+0      2016-09-14 12:39:04,506 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+3      2016-09-14 12:39:04,509 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+5536   2016-09-14 12:39:10,042 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+5537   2016-09-14 12:39:10,043 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+5537   2016-09-14 12:39:10,043 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+5537   2016-09-14 12:39:10,043 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+5537   2016-09-14 12:39:10,043 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+5537   2016-09-14 12:39:10,043 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+0      2016-09-14 12:40:25,595 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 12:40:25,597 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+2682   2016-09-14 12:40:28,277 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+2682   2016-09-14 12:40:28,277 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+2683   2016-09-14 12:40:28,278 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+2683   2016-09-14 12:40:28,278 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+2683   2016-09-14 12:40:28,278 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+2683   2016-09-14 12:40:28,278 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+8841   2016-09-14 12:40:34,436 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+8842   2016-09-14 12:40:34,437 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+8843   2016-09-14 12:40:34,438 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+8843   2016-09-14 12:40:34,438 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+8843   2016-09-14 12:40:34,438 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+8844   2016-09-14 12:40:34,439 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+16090  2016-09-14 12:40:41,685 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 6
+16090  2016-09-14 12:40:41,685 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+16090  2016-09-14 12:40:41,685 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 6
+16091  2016-09-14 12:40:41,686 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+16091  2016-09-14 12:40:41,686 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 6
+16092  2016-09-14 12:40:41,687 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+23716  2016-09-14 12:40:49,311 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+23717  2016-09-14 12:40:49,312 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+23718  2016-09-14 12:40:49,313 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+23718  2016-09-14 12:40:49,313 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+23718  2016-09-14 12:40:49,313 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+23718  2016-09-14 12:40:49,313 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+29307  2016-09-14 12:40:54,902 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+29310  2016-09-14 12:40:54,905 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+29310  2016-09-14 12:40:54,905 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+29310  2016-09-14 12:40:54,905 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+29310  2016-09-14 12:40:54,905 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 
+29310  2016-09-14 12:40:54,905 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+36649  2016-09-14 12:41:02,244 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+36649  2016-09-14 12:41:02,244 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+40245  2016-09-14 12:41:05,840 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+40245  2016-09-14 12:41:05,840 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+40245  2016-09-14 12:41:05,840 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+40245  2016-09-14 12:41:05,840 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+40245  2016-09-14 12:41:05,840 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+40245  2016-09-14 12:41:05,840 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+0      2016-09-14 12:43:43,346 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 12:43:43,348 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+3261   2016-09-14 12:43:46,607 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+3262   2016-09-14 12:43:46,608 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+3262   2016-09-14 12:43:46,608 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+3262   2016-09-14 12:43:46,608 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+3262   2016-09-14 12:43:46,608 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+3262   2016-09-14 12:43:46,608 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+24107  2016-09-14 12:44:07,453 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+24108  2016-09-14 12:44:07,454 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+24108  2016-09-14 12:44:07,454 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+24108  2016-09-14 12:44:07,454 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+24109  2016-09-14 12:44:07,455 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+24109  2016-09-14 12:44:07,455 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+28673  2016-09-14 12:44:12,019 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+28673  2016-09-14 12:44:12,019 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+28673  2016-09-14 12:44:12,019 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+28673  2016-09-14 12:44:12,019 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+28673  2016-09-14 12:44:12,019 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+28673  2016-09-14 12:44:12,019 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+32206  2016-09-14 12:44:15,552 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+32206  2016-09-14 12:44:15,552 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+32208  2016-09-14 12:44:15,554 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+32208  2016-09-14 12:44:15,554 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+32208  2016-09-14 12:44:15,554 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+32209  2016-09-14 12:44:15,555 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+41230  2016-09-14 12:44:24,576 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+41231  2016-09-14 12:44:24,577 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+41231  2016-09-14 12:44:24,577 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+41231  2016-09-14 12:44:24,577 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+41231  2016-09-14 12:44:24,577 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+41232  2016-09-14 12:44:24,578 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+54476  2016-09-14 12:44:37,822 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+54477  2016-09-14 12:44:37,823 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+54477  2016-09-14 12:44:37,823 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+54477  2016-09-14 12:44:37,823 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+54477  2016-09-14 12:44:37,823 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+54477  2016-09-14 12:44:37,823 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+78323  2016-09-14 12:45:01,669 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+78337  2016-09-14 12:45:01,683 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+78337  2016-09-14 12:45:01,683 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+78337  2016-09-14 12:45:01,683 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+78337  2016-09-14 12:45:01,683 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+78337  2016-09-14 12:45:01,683 DEBUG            ru.itis2016.ServletCalculator  - Cookies added subtraction
+86724  2016-09-14 12:45:10,070 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+86724  2016-09-14 12:45:10,070 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+86724  2016-09-14 12:45:10,070 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+86725  2016-09-14 12:45:10,071 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+86725  2016-09-14 12:45:10,071 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+86726  2016-09-14 12:45:10,072 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+99886  2016-09-14 12:45:23,232 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+99886  2016-09-14 12:45:23,232 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+99886  2016-09-14 12:45:23,232 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+99886  2016-09-14 12:45:23,232 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+99886  2016-09-14 12:45:23,232 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+99886  2016-09-14 12:45:23,232 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+103025 2016-09-14 12:45:26,371 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+103026 2016-09-14 12:45:26,372 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+103026 2016-09-14 12:45:26,372 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+103026 2016-09-14 12:45:26,372 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+103027 2016-09-14 12:45:26,373 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+103027 2016-09-14 12:45:26,373 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+105092 2016-09-14 12:45:28,438 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+105092 2016-09-14 12:45:28,438 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+105093 2016-09-14 12:45:28,439 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+105096 2016-09-14 12:45:28,442 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+105096 2016-09-14 12:45:28,442 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+105096 2016-09-14 12:45:28,442 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+106774 2016-09-14 12:45:30,120 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+106774 2016-09-14 12:45:30,120 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+106774 2016-09-14 12:45:30,120 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+106774 2016-09-14 12:45:30,120 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+106774 2016-09-14 12:45:30,120 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+106774 2016-09-14 12:45:30,120 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+108205 2016-09-14 12:45:31,551 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+108205 2016-09-14 12:45:31,551 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+108205 2016-09-14 12:45:31,551 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+108207 2016-09-14 12:45:31,553 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+108208 2016-09-14 12:45:31,554 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+108208 2016-09-14 12:45:31,554 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+109629 2016-09-14 12:45:32,975 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+109630 2016-09-14 12:45:32,976 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+109630 2016-09-14 12:45:32,976 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+109630 2016-09-14 12:45:32,976 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+109630 2016-09-14 12:45:32,976 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+109630 2016-09-14 12:45:32,976 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+110928 2016-09-14 12:45:34,274 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+110928 2016-09-14 12:45:34,274 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+110928 2016-09-14 12:45:34,274 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+110928 2016-09-14 12:45:34,274 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+110928 2016-09-14 12:45:34,274 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 4
+110928 2016-09-14 12:45:34,274 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+113036 2016-09-14 12:45:36,382 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+113036 2016-09-14 12:45:36,382 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+113036 2016-09-14 12:45:36,382 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+113036 2016-09-14 12:45:36,382 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+113036 2016-09-14 12:45:36,382 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+113037 2016-09-14 12:45:36,383 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+115200 2016-09-14 12:45:38,546 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+115201 2016-09-14 12:45:38,547 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+115201 2016-09-14 12:45:38,547 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+115201 2016-09-14 12:45:38,547 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+115201 2016-09-14 12:45:38,547 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+115201 2016-09-14 12:45:38,547 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+116545 2016-09-14 12:45:39,891 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+116545 2016-09-14 12:45:39,891 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+116545 2016-09-14 12:45:39,891 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+116545 2016-09-14 12:45:39,891 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+116545 2016-09-14 12:45:39,891 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+116545 2016-09-14 12:45:39,891 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+117873 2016-09-14 12:45:41,219 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+117873 2016-09-14 12:45:41,219 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+117874 2016-09-14 12:45:41,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+117874 2016-09-14 12:45:41,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+117874 2016-09-14 12:45:41,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+117874 2016-09-14 12:45:41,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+119190 2016-09-14 12:45:42,536 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+119190 2016-09-14 12:45:42,536 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+119190 2016-09-14 12:45:42,536 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+119190 2016-09-14 12:45:42,536 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+119190 2016-09-14 12:45:42,536 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+119191 2016-09-14 12:45:42,537 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+120508 2016-09-14 12:45:43,854 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+120509 2016-09-14 12:45:43,855 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+120509 2016-09-14 12:45:43,855 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+120509 2016-09-14 12:45:43,855 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+120509 2016-09-14 12:45:43,855 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+120509 2016-09-14 12:45:43,855 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+121537 2016-09-14 12:45:44,883 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+121537 2016-09-14 12:45:44,883 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+121537 2016-09-14 12:45:44,883 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+121537 2016-09-14 12:45:44,883 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+121537 2016-09-14 12:45:44,883 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+121537 2016-09-14 12:45:44,883 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+122630 2016-09-14 12:45:45,976 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+122630 2016-09-14 12:45:45,976 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+122630 2016-09-14 12:45:45,976 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+122630 2016-09-14 12:45:45,976 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+122630 2016-09-14 12:45:45,976 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+122631 2016-09-14 12:45:45,977 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+123457 2016-09-14 12:45:46,803 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+123457 2016-09-14 12:45:46,803 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+123457 2016-09-14 12:45:46,803 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+123458 2016-09-14 12:45:46,804 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+123458 2016-09-14 12:45:46,804 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+123458 2016-09-14 12:45:46,804 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 1
+125497 2016-09-14 12:45:48,843 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+125497 2016-09-14 12:45:48,843 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+125497 2016-09-14 12:45:48,843 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+125497 2016-09-14 12:45:48,843 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+125497 2016-09-14 12:45:48,843 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+125499 2016-09-14 12:45:48,845 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+437182 2016-09-14 12:51:00,528 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+437182 2016-09-14 12:51:00,528 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+444915 2016-09-14 12:51:08,261 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 0
+444916 2016-09-14 12:51:08,262 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+444916 2016-09-14 12:51:08,262 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+444916 2016-09-14 12:51:08,262 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 0
+444916 2016-09-14 12:51:08,262 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 0
+444919 2016-09-14 12:51:08,265 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+448133 2016-09-14 12:51:11,479 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 0
+448133 2016-09-14 12:51:11,479 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+448133 2016-09-14 12:51:11,479 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 0
+448133 2016-09-14 12:51:11,479 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+448133 2016-09-14 12:51:11,479 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+448133 2016-09-14 12:51:11,479 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 0
+461173 2016-09-14 12:51:24,519 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+461173 2016-09-14 12:51:24,519 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+461173 2016-09-14 12:51:24,519 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+461173 2016-09-14 12:51:24,519 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+461173 2016-09-14 12:51:24,519 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 2
+461173 2016-09-14 12:51:24,519 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+467328 2016-09-14 12:51:30,674 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 3
+467328 2016-09-14 12:51:30,674 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+467328 2016-09-14 12:51:30,674 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 3
+467328 2016-09-14 12:51:30,674 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+467329 2016-09-14 12:51:30,675 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+467329 2016-09-14 12:51:30,675 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 3
+779573 2016-09-14 12:56:42,919 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+779573 2016-09-14 12:56:42,919 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+782874 2016-09-14 12:56:46,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+782874 2016-09-14 12:56:46,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+782874 2016-09-14 12:56:46,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+782874 2016-09-14 12:56:46,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+782874 2016-09-14 12:56:46,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+782874 2016-09-14 12:56:46,220 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+0      2016-09-14 12:57:06,207 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 12:57:06,209 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+2140   2016-09-14 12:57:08,347 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+2142   2016-09-14 12:57:08,349 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+2142   2016-09-14 12:57:08,349 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+2143   2016-09-14 12:57:08,350 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+2143   2016-09-14 12:57:08,350 DEBUG            ru.itis2016.ServletCalculator  - Cookies added 5
+2144   2016-09-14 12:57:08,351 DEBUG            ru.itis2016.ServletCalculator  - Cookies added addition
+83852  2016-09-14 12:58:30,059 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+83852  2016-09-14 12:58:30,059 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 12:59:18,620 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 12:59:18,622 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 13:53:19,072 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+3      2016-09-14 13:53:19,075 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+14406  2016-09-14 13:53:33,478 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+14406  2016-09-14 13:53:33,478 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+18525  2016-09-14 13:53:37,597 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+18525  2016-09-14 13:53:37,597 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+491746 2016-09-14 14:01:30,818 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+491747 2016-09-14 14:01:30,819 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+508421 2016-09-14 14:01:47,493 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+508421 2016-09-14 14:01:47,493 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+516366 2016-09-14 14:01:55,438 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+516366 2016-09-14 14:01:55,438 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 14:02:40,599 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+4      2016-09-14 14:02:40,603 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+2460   2016-09-14 14:02:43,059 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2461   2016-09-14 14:02:43,060 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+5529   2016-09-14 14:02:46,128 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+5530   2016-09-14 14:02:46,129 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+321919 2016-09-14 14:08:02,518 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 4
+321920 2016-09-14 14:08:02,519 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 14:13:34,841 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 4
+2      2016-09-14 14:13:34,843 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+334724 2016-09-14 14:19:09,565 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+334724 2016-09-14 14:19:09,565 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+373111 2016-09-14 14:19:47,952 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+373112 2016-09-14 14:19:47,953 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 14:49:50,542 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+5      2016-09-14 14:49:50,547 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+10468  2016-09-14 14:50:01,010 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+10468  2016-09-14 14:50:01,010 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 14:51:38,274 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+3      2016-09-14 14:51:38,277 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 14:52:11,760 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+2      2016-09-14 14:52:11,762 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 14:52:34,702 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+2      2016-09-14 14:52:34,704 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 14:53:05,095 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 4
+2      2016-09-14 14:53:05,097 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 14:55:27,086 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+2      2016-09-14 14:55:27,088 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 14:57:08,642 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+2      2016-09-14 14:57:08,644 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 15:07:40,652 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+4      2016-09-14 15:07:40,656 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 15:13:15,133 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+2      2016-09-14 15:13:15,135 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 15:16:29,766 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+2      2016-09-14 15:16:29,768 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+1      2016-09-14 15:17:43,722 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+3      2016-09-14 15:17:43,724 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 15:24:02,860 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+3      2016-09-14 15:24:02,863 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 15:28:21,272 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+4      2016-09-14 15:28:21,276 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 15:29:16,051 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+2      2016-09-14 15:29:16,053 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+59946  2016-09-14 15:30:15,997 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+59947  2016-09-14 15:30:15,998 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 15:42:27,498 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+3      2016-09-14 15:42:27,501 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 15:45:11,231 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 15:45:11,233 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+22332  2016-09-14 15:45:33,563 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+22334  2016-09-14 15:45:33,565 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+182488 2016-09-14 15:48:13,719 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: 5
+182489 2016-09-14 15:48:13,720 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: addition
+0      2016-09-14 15:57:57,938 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+3      2016-09-14 15:57:57,941 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 16:06:08,045 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+7      2016-09-14 16:06:08,052 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 16:08:24,353 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 16:08:24,355 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 16:16:46,353 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 16:16:46,355 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+44772  2016-09-14 16:17:31,125 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+44772  2016-09-14 16:17:31,125 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+184660 2016-09-14 16:19:51,013 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+184660 2016-09-14 16:19:51,013 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+332009 2016-09-14 16:22:18,362 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+332010 2016-09-14 16:22:18,363 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 16:25:55,887 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 16:25:55,889 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 16:33:00,216 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 16:33:00,218 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 16:34:25,504 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 16:34:25,506 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 16:35:56,007 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+1      2016-09-14 16:35:56,008 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 16:37:33,990 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+3      2016-09-14 16:37:33,993 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:03:02,971 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+3      2016-09-14 17:03:02,974 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+13639  2016-09-14 17:03:16,610 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+13640  2016-09-14 17:03:16,611 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+58901  2016-09-14 17:04:01,872 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+58902  2016-09-14 17:04:01,873 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+75253  2016-09-14 17:04:18,224 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+75253  2016-09-14 17:04:18,224 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:09:41,145 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 17:09:41,147 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:10:20,514 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 17:10:20,516 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+420376 2016-09-14 17:17:20,890 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+420377 2016-09-14 17:17:20,891 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+462487 2016-09-14 17:18:03,001 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+462488 2016-09-14 17:18:03,002 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:26:37,635 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 17:26:37,637 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+63726  2016-09-14 17:27:41,361 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+63729  2016-09-14 17:27:41,364 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:29:13,772 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 17:29:13,774 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:30:49,723 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+82     2016-09-14 17:30:49,805 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+13484  2016-09-14 17:31:03,207 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+13485  2016-09-14 17:31:03,208 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:33:40,691 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+6      2016-09-14 17:33:40,697 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:36:19,720 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+4      2016-09-14 17:36:19,724 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:38:10,149 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+4      2016-09-14 17:38:10,153 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+36235  2016-09-14 17:38:46,384 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+36236  2016-09-14 17:38:46,385 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:39:53,926 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 17:39:53,928 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+9970   2016-09-14 17:40:03,896 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+9971   2016-09-14 17:40:03,897 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+26555  2016-09-14 17:40:20,481 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+26556  2016-09-14 17:40:20,482 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+33810  2016-09-14 17:40:27,736 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+33810  2016-09-14 17:40:27,736 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+61574  2016-09-14 17:40:55,500 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+61574  2016-09-14 17:40:55,500 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:44:42,894 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+14     2016-09-14 17:44:42,908 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:46:21,858 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 17:46:21,860 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:47:44,764 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 17:47:44,766 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:49:20,465 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+2      2016-09-14 17:49:20,467 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+8365   2016-09-14 17:49:28,830 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+8366   2016-09-14 17:49:28,831 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+0      2016-09-14 17:56:04,300 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+4      2016-09-14 17:56:04,304 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
+7266   2016-09-14 17:56:11,566 INFO             ru.itis2016.ServletCalculator  - Text that was added to session: null
+7267   2016-09-14 17:56:11,567 INFO             ru.itis2016.ServletCalculator  - mathAction that was added to session: null
