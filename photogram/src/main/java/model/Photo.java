@@ -3,7 +3,7 @@ package model;
 import java.util.List;
 
 /**
- * Created by Сергей on 09.11.2016.
+ * Created by Сергей on 07.11.2016.
  */
 public class Photo {
 
