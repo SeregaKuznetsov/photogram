@@ -8,6 +8,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
@@ -15,20 +16,22 @@ import java.sql.SQLException;
  */
 public class DAOFactoryImpl extends DAOFactory {
 
-    public Connection createConnection() {
-
-        Context ctx = null;
+    public DAOFactoryImpl() {
         try {
-            ctx = new InitialContext();
-            return ((DataSource) ctx.lookup("jdbc:postgresql://localhost/photogram")).getConnection();
-        } catch (NamingException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        ;
 
-        return null;
+    }
+    private final String connectionUrl = "jdbc:postgresql://localhost:5432/photogram";
+    private final String dbUser = "postgres";
+    private final String dbPwd = "123";
+
+    public Connection createConnection() throws SQLException {
+        Connection conn = null;
+        conn = DriverManager.getConnection(connectionUrl, dbUser, dbPwd);
+        return conn;
     }
 
 

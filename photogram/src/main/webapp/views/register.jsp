@@ -1,118 +1,35 @@
-<%@page contentType="text/html; charset=UTF-8" %>
-<%@ page isELIgnored="false" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<fmt:setLocale value="${language}" />
-<fmt:setBundle basename="i18n.UsersBundle" />
-
-<html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Register page</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
 </head>
 <body>
+
 <div class="container">
-    <form action="register" method=post id="register-form" class="form-signin"><!--novalidate="novalidate"-->
-        <h2 class="form-signin-heading"><fmt:message key="register.label.greeting" /></h2>
 
-        <div class="form-group">
-            <label for="email" class="sr-only"><fmt:message key="register.label.email" /></label>
-            <input type="text" name="email" id="email" size="25" class="form-control" placeholder="<fmt:message key="register.label.email" />">
-        </div>
-        <div class="form-group">
-            <label for="username" class="sr-only"><fmt:message key="register.label.username" /></label>
-            <input type="text" name="username" id="username" size="25" class="form-control" placeholder="<fmt:message key="register.label.username" />">
-        </div>
-        <div class="form-group">
-            <label for="password" class="sr-only"><fmt:message key="register.label.password" /></label>
-            <input type="password" size="15" name="password" id="password" class="form-control"
-                   placeholder="<fmt:message key="register.label.password" />">
-        </div>
-        <input type="submit" value="<fmt:message key="register.label.submit" />" class="btn btn-lg btn-primary btn-block">
-        <input type="reset" value="<fmt:message key="register.label.reset" />" class="btn btn-lg btn-primary btn-block">
+    <form class="form-signin" action="register" method="post">
+        <h2 class="form-signin-heading">Форма регистрации</h2>
+        <input type="text" name="username" class="form-control" placeholder="Логин" autofocus="">
+        <input type="password" name="password" class="form-control" placeholder="Пароль">
+        <input type="email" name="email" class="form-control" placeholder="Почта">
+        <input type="number" name="age" class="form-control" placeholder="Возраст">
+        <button id="login-btn" class="btn btn-sm btn-primary" type="submit">Зарегистрироваться</button>
     </form>
+
 </div>
-<script src="webjars/jquery-validation/1.14.0/jquery.validate.min.js"></script>
-<script>// jQuery Form Validation code -->
-$.validator.setDefaults({
-    highlight: function (element) {
-        $(element).closest('.form-group').addClass('has-error');
-    },
-    unhighlight: function (element) {
-        $(element).closest('.form-group').removeClass('has-error');
-    },
-    errorElement: 'span',
-    errorClass: 'help-block',
-    errorPlacement: function (error, element) {
-        if (element.parent('.input-group').length) {
-            error.insertAfter(element.parent());
-        } else {
-            error.insertAfter(element);
-        }
-    }
-});
 
-// When the browser is ready...
-$(function () {
-
-    // Setup form validation on the #register-form element
-    $("#register-form").validate({
-        onkeyup: false,
-        // Specify the validation rules
-        rules: {
-            username: {
-                cache: false,
-                required: true,
-                //minlength: 5,
-                remote: {
-                    url: "checkusername",
-                    type: "post"
-                }
-            },
-            email: {
-                required: true,
-                email: true
-
-            },
-            password: {
-                required: true,
-                minlength: 5
-            },
-            agree: "required"
-        },
-
-        // Specify the validation error messages
-        messages: {
-            firstname: "<fmt:message key="register.error.firstname" />",
-            lastname: "<fmt:message key="register.error.lastname" />",
-            password: {
-                required: "<fmt:message key="register.error.password.required" />",
-                minlength: "<fmt:message key="register.error.password.minlength" />"
-            },
-            username: {
-                required: "<fmt:message key="register.error.username.required" />",
-                minlength: "<fmt:message key="register.error.username.minlength" />",
-                remote: "<fmt:message key="register.error.username.remote" />"
-            },
-            email: "<fmt:message key="register.error.email" />",
-            agree: "<fmt:message key="register.error.agree" />"
-        },
-
-        submitHandler: function (form) {
-
-            form.submit();
-
-        }
-    });
-    $("#register-form").change(function () {
-        $("#username").removeData("previousValue"); //clear cache when changing group
-        $("#register-form").data('validator').element("#username"); //retrigger remote call
-        //my validator is stored in .data() on the form
-    });
-
-
-});
-
-
-</script>
 </body>
 </html>
 

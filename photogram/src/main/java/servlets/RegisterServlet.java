@@ -34,14 +34,10 @@ public class RegisterServlet extends HttpServlet {
         User newUser = new User();
         log.debug("Retrieving user name from session");
         newUser.setName(req.getParameter("username"));
-        try {
-            newUser.setPassword(req.getParameter("password"));
+        newUser.setPassword(req.getParameter("password"));
         log.debug("Calculating and setting password for the user");
-        } catch (NoSuchAlgorithmException e) {
-            log.error("MD5 algorithm not fount");
-            e.printStackTrace();
-        }
         newUser.setEmail(req.getParameter("email"));
+        newUser.setAge(Integer.valueOf(req.getParameter("age")));
         log.debug("Retrieving user email from request");
 
         /*  //jquery submit disable demonstration
@@ -69,11 +65,11 @@ public class RegisterServlet extends HttpServlet {
             //req.setAttribute("passwordhash", newUser.getPasswordHash());
             getServletContext().getRequestDispatcher("/views/mainPage.jsp").forward(req, resp);
             //getServletContext().getRequestDispatcher("/logon.jsp").forward(req, resp);
-            GreetingEmail ge=new GreetingEmail(newUser.getEmail(), newUser.getName(), req.getParameter("password"),tk.getUuid());
-            ge.send();
+            //GreetingEmail ge=new GreetingEmail(newUser.getEmail(), newUser.getName(), req.getParameter("password"),tk.getUuid());
+            //ge.send();
             //MailUtil mu=new MailUtil(newUser.getEmail(), newUser.getUsername(), req.getParameter("password"));
             //mu.start();
-            log.info("Sending email to " + newUser.getEmail());
+            //log.info("Sending email to " + newUser.getEmail());
         }
         catch (Exception ex)
         {

@@ -10,6 +10,7 @@ import java.util.List;
 public interface UserDAOInterface {
 
     void addUser(User user);
+    User read(String username, String password);
     void deleteUser(User user);
     void update(User user);
     User getUserByName(String name);

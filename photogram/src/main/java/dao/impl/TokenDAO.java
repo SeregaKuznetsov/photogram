@@ -22,7 +22,7 @@ public class TokenDAO extends DAOConnection implements TokenDAOInterface{
         Connection con = getConnection();
 
         try {
-            stmt = con.prepareStatement("UPDATE user SET uuid =  ?, deletedate=? " +
+            stmt = con.prepareStatement("UPDATE users SET uuid =  ?, deletedate=? " +
                     "WHERE id =  ?");
             stmt.setString(1, token.getUuid());
             stmt.setDate(2, new java.sql.Date(token.getDeleteDate().getTime()));
@@ -46,7 +46,7 @@ public class TokenDAO extends DAOConnection implements TokenDAOInterface{
 
 
     public Token readToken(String uuid) {
-        String sql = "SELECT * FROM user WHERE uuid = ?";
+        String sql = "SELECT * FROM users WHERE uuid = ?";
         User s = null;
         Token t=new Token();
         PreparedStatement stm = null;
@@ -69,10 +69,6 @@ public class TokenDAO extends DAOConnection implements TokenDAOInterface{
             else {t=null;}
         } catch (SQLException e) {
             e.printStackTrace();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
         } finally {
             try {
                 stm.close();
@@ -89,7 +85,7 @@ public class TokenDAO extends DAOConnection implements TokenDAOInterface{
         PreparedStatement stmt = null;
         Connection con = getConnection();
         try {
-            stmt = con.prepareStatement("DELETE FROM user WHERE uuid =  ?");
+            stmt = con.prepareStatement("DELETE FROM users WHERE uuid =  ?");
             stmt.setString(1, token.getUuid());
 
             stmt.execute();
@@ -113,7 +109,7 @@ public class TokenDAO extends DAOConnection implements TokenDAOInterface{
         Connection con = getConnection();
 
         try {
-            stmt = con.prepareStatement("UPDATE user SET uuid =  NULL, deletedate=NULL " +
+            stmt = con.prepareStatement("UPDATE users SET uuid =  NULL, deletedate=NULL " +
                     "WHERE uuid =  ?");
             stmt.setString(1, token.getUuid());
             stmt.execute();
@@ -137,7 +133,7 @@ public class TokenDAO extends DAOConnection implements TokenDAOInterface{
         Connection con = getConnection();
 
         try {
-            stmt = con.prepareStatement("DELETE FROM user  " +
+            stmt = con.prepareStatement("DELETE FROM users  " +
                     "WHERE deletedate<?");
             stmt.setDate(1, new java.sql.Date(date.getTime()));
             stmt.execute();
@@ -156,7 +152,7 @@ public class TokenDAO extends DAOConnection implements TokenDAOInterface{
     }
 
     public User readUser(String uuid) {
-        String sql = "SELECT * FROM user WHERE uuid = ?";
+        String sql = "SELECT * FROM users WHERE uuid = ?";
         User s = null;
         PreparedStatement stm = null;
         Connection con = getConnection();
@@ -173,10 +169,6 @@ public class TokenDAO extends DAOConnection implements TokenDAOInterface{
             s.setAge(rs.getInt("age"));
 
         } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } finally {
             try {
