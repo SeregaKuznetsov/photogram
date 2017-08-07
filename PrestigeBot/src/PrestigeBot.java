@@ -16,11 +16,13 @@ import java.util.List;
 
 public class PrestigeBot extends TelegramLongPollingBot {
 
-    Data dataBase = new Data();
+    private Data dataBase = new Data();
 
 
     {
         User sergey = new User(273255483, "Sergey", "Kuznetsov", Role.OWNER);
+        //User sergey2 = new User(273255483, "Sergey", "Kuznetsov", Role.ADMIN);
+
         dataBase.addNewUser(sergey);
     }
 
@@ -50,13 +52,22 @@ public class PrestigeBot extends TelegramLongPollingBot {
         Message message = update.getMessage();
         if (message != null && message.hasText()) {
 
+            int userId = message.getFrom().getId();
+
             if (message.getText().equals("/help")) {
                 sendMsg(message, "Привет, я робот");
             }
 
-            if (hasRegistered(message.getFrom().getId())) {
-                sendMsg(message, "Привет");
+            //Если пользователь зарегистрирован
+            if (hasRegistered(userId)) {
+                User currentUser = dataBase.getUserById(userId);
+                if (currentUser.getRole().equals(Role.OWNER)) {
+                    sendMsg(message, "Привет, хозяин!");
+
+                } else
+                    sendMsg(message, "Привет");
             }
+            //Если пользователь еще не зарегистрирован
             else {
                 registrate(message);
                 sendMsg(message, "Вы зарегестрированны");

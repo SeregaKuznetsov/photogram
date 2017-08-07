@@ -14,4 +14,13 @@ public class Data {
     void addNewUser (User user) {
         users.add(user);
     }
+
+    User getUserById(int id) {
+
+        for (User user : users) {
+            if (user.getId() == id)
+                return user;
+        }
+        return null;
+    }
 }
