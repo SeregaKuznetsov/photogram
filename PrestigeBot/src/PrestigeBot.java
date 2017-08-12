@@ -21,6 +21,7 @@ import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static entity.Role.*;
 import static java.lang.Math.toIntExact;
 
 public class PrestigeBot extends TelegramLongPollingBot {
@@ -62,69 +63,192 @@ public class PrestigeBot extends TelegramLongPollingBot {
         if (message != null && message.hasText()) {
 
             int userId = message.getFrom().getId();
+            String textMsg = message.getText();
 
-            if (message.getText().equals("/help")) {
+            if (textMsg.equals("/help")) {
                 sendMsg(message, "Привет, я робот");
             }
 
             //Если пользователь зарегистрирован
             if (hasRegistered(userId)) {
                 User currentUser = dataBase.getUserById(userId);
-                if (currentUser.getRole().equals(Role.OWNER)) {
-                    sendMsg(message, "Привет, хозяин!");
+                if (currentUser.getRole().equals(OWNER)) {
+                    switch (textMsg) {
+                        case "Добавить запись":
+                            sendMsg(message, "Пожалуйста введите информацию в формате дд.мм,колличество человек,чч:мм," +
+                            "примечания(необязательно)");
+                            sendMsg(message, "Например так: 25.03, 3, 15:45, нужна белая лошадь");
+                            break;
+                        case "Посмотреть записи":
 
-                } else
-                    sendMsg(message, "Привет");
+                            break;
+                        case "Удалить запись":
+
+                            break;
+                        case "Документы":
+
+                            break;
+                        default:
+                            sendMsg(message, "Привет, хозяин!");
+                            showMenu(currentUser.getRole(), message);
+                            break;
+                    }
+
+                } else if (currentUser.getRole().equals(ADMIN)) {
+                    sendMsg(message, "Привет, админ!");
+                } else if (currentUser.getRole().equals(WORKER)) {
+                    sendMsg(message, "Привет, работник!");
+                } else if (currentUser.getRole().equals(CLIENT)) {
+                    sendMsg(message, "Привет, клиент!");
+                } else if (currentUser.getRole().equals(ANONIMUS)) {
+                    switch (textMsg) {
+                        case "Владелец":
+                            currentUser.setRole(OWNER);
+                            sendMsg(message, "Вы зарегистрированы как владелец");
+                            break;
+                        case "Администратор":
+                            currentUser.setRole(ADMIN);
+                            sendMsg(message, "Вы зарегистрированы как администротор");
+                            break;
+                        case "Сотрудник":
+                            currentUser.setRole(WORKER);
+                            sendMsg(message, "Вы зарегистрированы как работник");
+                            break;
+                        case "Клиент":
+                            currentUser.setRole(CLIENT);
+                            sendMsg(message, "Вы зарегистрированы как клиент");
+                            break;
+                        default:
+                            showRegistrateKeyboard(message);
+                            break;
+                    }
+                }
+
             }
             //Если пользователь еще не зарегистрирован
             else {
                 registrate(message);
-                sendMsg(message, "Вы зарегестрированны");
             }
-       } //  else if (update.hasCallbackQuery()) {
-//            // Set variables
-//
-//            String call_data = update.getCallbackQuery().getData();
-//            long message_id = update.getCallbackQuery().getMessage().getMessageId();
-//            long chat_id = update.getCallbackQuery().getMessage().getChatId();
-//
-//            if (call_data.equals("update_msg_text")) {
-//                sendMsg(update.getCallbackQuery().getMessage(),"123");
-//            }
-//        }
+       }
+    }
+
+    private void showMenu(Role role, Message message) {
+        switch (role) {
+            case OWNER: {
+                showOwnerMenu(message);
+                break;
+            }
+            case ADMIN: {
+                showAdminMenu(message);
+                break;
+            }
+            case WORKER: {
+                showWorkerMenu(message);
+                break;
+            }
+            case CLIENT: {
+                showClientMenu(message);
+                break;
+            }
+            case ANONIMUS:
+                showRegistrateKeyboard(message);
+                break;
+        }
+    }
+
+    private void showClientMenu(Message message) {
+
+    }
+
+    private void showWorkerMenu(Message message) {
+    }
+
+    private void showAdminMenu(Message message) {
+    }
+
+    private void showOwnerMenu(Message message) {
+        SendMessage sendMessage = new SendMessage()
+                .setChatId(message.getChatId())
+                .setText("Что бы вы хотели сделать?");
+        // Create ReplyKeyboardMarkup object
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        // Create the keyboard (list of keyboard rows)
+        List<KeyboardRow> keyboard = new ArrayList<>();
+        // Create a keyboard row
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardRow row3 = new KeyboardRow();
+        KeyboardRow row4 = new KeyboardRow();
+        // Set each button, you can also use KeyboardButton objects if you need something else than text
+        row1.add("Добавить запись");
+        row2.add("Посмотреть записи");
+        row3.add("Удалить запись");
+        row4.add("Документы");
+        // Add the first row to the keyboard
+        keyboard.add(row1);
+        keyboard.add(row2);
+        keyboard.add(row3);
+        keyboard.add(row4);
+        // Set the keyboard to the markup
+        keyboardMarkup.setKeyboard(keyboard);
+        keyboardMarkup.setOneTimeKeyboard(true);
+
+        // Add it to the message
+        sendMessage.setReplyMarkup(keyboardMarkup);
+        try {
+            sendMessage(sendMessage); // Sending our message object to user
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void showRegistrateKeyboard(Message message) {
+        SendMessage sendMessage = new SendMessage()
+                .setChatId(message.getChatId())
+                .setText("Пожалуйста, представтесь");
+        // Create ReplyKeyboardMarkup object
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        // Create the keyboard (list of keyboard rows)
+        List<KeyboardRow> keyboard = new ArrayList<>();
+        // Create a keyboard row
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardRow row3 = new KeyboardRow();
+        KeyboardRow row4 = new KeyboardRow();
+        // Set each button, you can also use KeyboardButton objects if you need something else than text
+        row1.add("Владелец");
+        row2.add("Администратор");
+        row3.add("Сотрудник");
+        row4.add("Клиент");
+        // Add the first row to the keyboard
+        keyboard.add(row1);
+        keyboard.add(row2);
+        keyboard.add(row3);
+        keyboard.add(row4);
+        // Set the keyboard to the markup
+        keyboardMarkup.setKeyboard(keyboard);
+        keyboardMarkup.setOneTimeKeyboard(true);
+
+        // Add it to the message
+        sendMessage.setReplyMarkup(keyboardMarkup);
+        try {
+            sendMessage(sendMessage); // Sending our message object to user
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
     }
 
     private void registrate(Message message) {
-        sendMsg(message, "Пожалуйста, представтесь");
 
-//        SendMessage sendMessage = new SendMessage() // Create a message object object
-//                .setChatId(message.getChatId())
-//                .setText("some text");
-//        InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
-//        List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
-//        List<InlineKeyboardButton> rowInline = new ArrayList<>();
-//        rowInline.add(new InlineKeyboardButton().setText("Update message text").setCallbackData("update_msg_text"));
-//        // Set the keyboard to the markup
-//        rowsInline.add(rowInline);
-//        // Add it to the message
-//        markupInline.setKeyboard(rowsInline);
-//        sendMessage.setReplyMarkup(markupInline);
-//        try {
-//            sendMessage(sendMessage); // Sending our message object to user
-//        } catch (TelegramApiException e) {
-//            e.printStackTrace();
-//        }
-
-
+        showRegistrateKeyboard(message);
 
         org.telegram.telegrambots.api.objects.User tellUser;
         tellUser = message.getFrom();
         int id = tellUser.getId();
         String name = tellUser.getFirstName();
         String lastName = tellUser.getLastName();
-        User myUser = new User(id, name, lastName);
+        User myUser = new User(id, name, lastName, ANONIMUS);
         dataBase.addNewUser(myUser);
-
 
     }
 

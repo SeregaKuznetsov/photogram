@@ -5,5 +5,5 @@ package entity;
  */
 
 public enum Role {
-    OWNER, ADMIN, WORKER, CLIENT
+    OWNER, ADMIN, WORKER, CLIENT, ANONIMUS
 }
