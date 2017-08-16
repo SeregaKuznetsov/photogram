@@ -1,3 +1,5 @@
+package data;
+
 import entity.User;
 
 import java.util.ArrayList;
@@ -6,16 +8,17 @@ import java.util.List;
 /**
  * Created by Сергей on 06.08.2017.
  */
-public class Data {
+public class UserData {
     private ArrayList<User> users = new ArrayList<>();
-    List<User> getAllUsers() {
+
+    public List<User> getAllUsers() {
         return users;
     }
-    void addNewUser (User user) {
+    public void addNewUser(User user) {
         users.add(user);
     }
 
-    User getUserById(int id) {
+    public User getUserById(int id) {
 
         for (User user : users) {
             if (user.getId() == id)

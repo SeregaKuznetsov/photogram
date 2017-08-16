@@ -2,38 +2,42 @@
  * Created by Сергей on 05.08.2017.
  */
 
+import data.EntryData;
+import data.MessageData;
+import data.UserData;
 import entity.*;
+import entity.User;
 import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.TelegramBotsApi;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
-import org.telegram.telegrambots.api.methods.updatingmessages.EditMessageText;
-import org.telegram.telegrambots.api.objects.Message;
-import org.telegram.telegrambots.api.objects.Update;
-import org.telegram.telegrambots.api.objects.replykeyboard.InlineKeyboardMarkup;
+import org.telegram.telegrambots.api.objects.*;
 import org.telegram.telegrambots.api.objects.replykeyboard.ReplyKeyboardMarkup;
-import org.telegram.telegrambots.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardButton;
 import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
+import validation.NewEntryValidator;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import static entity.Role.*;
-import static java.lang.Math.toIntExact;
 
 public class PrestigeBot extends TelegramLongPollingBot {
 
-    private Data dataBase = new Data();
+    private UserData userDataBase = new UserData();
+    private MessageData messageData = new MessageData();
+    private NewEntryValidator newEntryValidator = new NewEntryValidator();
+    private EntryData entryData = new EntryData();
 
 
     {
         //User sergey = new User(273255483, "Sergey", "Kuznetsov", Role.OWNER);
         //User sergey2 = new User(273255483, "Sergey", "Kuznetsov", Role.ADMIN);
 
-        //dataBase.addNewUser(sergey);
+        //userDataBase.addNewUser(sergey);
     }
 
     public static void main(String[] args) {
@@ -69,18 +73,37 @@ public class PrestigeBot extends TelegramLongPollingBot {
                 sendMsg(message, "Привет, я робот");
             }
 
+            if (waitingForMessage(userId)) {
+                String action = messageData.getValue(userId);
+                if (action.equals("Добавить запись")) {
+                    Entry entry = newEntryValidator.getEntryFromMsg(textMsg, message.getFrom().getFirstName());
+                    entryData.add(entry);
+                    messageData.delete(userId);
+                }
+            } else
             //Если пользователь зарегистрирован
             if (hasRegistered(userId)) {
-                User currentUser = dataBase.getUserById(userId);
+                User currentUser = userDataBase.getUserById(userId);
+
                 if (currentUser.getRole().equals(OWNER)) {
                     switch (textMsg) {
                         case "Добавить запись":
-                            sendMsg(message, "Пожалуйста введите информацию в формате дд.мм,колличество человек,чч:мм," +
-                            "примечания(необязательно)");
-                            sendMsg(message, "Например так: 25.03, 3, 15:45, нужна белая лошадь");
+                            sendMsg(message, "Пожалуйста введите информацию в формате дд.мм, колличество человек, чч:мм," +
+                            " примечания(необязательно)");
+                            sendMsg(message, "Например так: 02.03, 4, 15:45, нужна белая лошадь");
+                            waitForMessage(userId, textMsg);
                             break;
                         case "Посмотреть записи":
-
+                            Calendar calendar = new GregorianCalendar();
+                            calendar.set(Calendar.DAY_OF_MONTH, 2);
+                            calendar.set(Calendar.MONTH, 3);
+                            List<Entry> entries = entryData.getEntryByDate(calendar);
+                            Entry entry = entries.get(0);
+                            sendMsg(message, "Календарь: " + calendar.toString() +
+                                       " Число человек:" + entry.getCount() +
+                                        " Время " + entry.getTime() +
+                                            " Заметка " + entry.getNotes() +
+                                            " Сделана " + entry.getMadeBy());
                             break;
                         case "Удалить запись":
 
@@ -130,6 +153,14 @@ public class PrestigeBot extends TelegramLongPollingBot {
                 registrate(message);
             }
        }
+    }
+
+    private boolean waitingForMessage(int from) {
+        return messageData.find(from);
+    }
+
+    private void waitForMessage(int userId, String textMsg) {
+        messageData.add(userId, textMsg);
     }
 
     private void showMenu(Role role, Message message) {
@@ -248,13 +279,13 @@ public class PrestigeBot extends TelegramLongPollingBot {
         String name = tellUser.getFirstName();
         String lastName = tellUser.getLastName();
         User myUser = new User(id, name, lastName, ANONIMUS);
-        dataBase.addNewUser(myUser);
+        userDataBase.addNewUser(myUser);
 
     }
 
     private boolean hasRegistered(Integer id) {
 
-        List<User> users = dataBase.getAllUsers();
+        List<User> users = userDataBase.getAllUsers();
 
         for (User user : users) {
             if (user.getId() == id)
