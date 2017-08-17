@@ -76,9 +76,11 @@ public class PrestigeBot extends TelegramLongPollingBot {
             if (waitingForMessage(userId)) {
                 String action = messageData.getValue(userId);
                 if (action.equals("Добавить запись")) {
-                    Entry entry = newEntryValidator.getEntryFromMsg(textMsg, message.getFrom().getFirstName());
+                    Entry entry = newEntryValidator.getEntryFromMsg(textMsg, message.getFrom().getFirstName() +
+                            " " + message.getFrom().getLastName());
                     entryData.add(entry);
                     messageData.delete(userId);
+                    sendMsg(message, "Запись сохранена(Сделать валидацию)");
                 }
             } else
             //Если пользователь зарегистрирован
@@ -89,21 +91,25 @@ public class PrestigeBot extends TelegramLongPollingBot {
                     switch (textMsg) {
                         case "Добавить запись":
                             sendMsg(message, "Пожалуйста введите информацию в формате дд.мм, колличество человек, чч:мм," +
-                            " примечания(необязательно)");
-                            sendMsg(message, "Например так: 02.03, 4, 15:45, нужна белая лошадь");
+                            " стоимость, примечания(необязательно)");
+                            sendMsg(message, "Например так: 02.03, 4, 15:45, 2000, нужна белая лошадь");
                             waitForMessage(userId, textMsg);
                             break;
                         case "Посмотреть записи":
                             Calendar calendar = new GregorianCalendar();
-                            calendar.set(Calendar.DAY_OF_MONTH, 2);
-                            calendar.set(Calendar.MONTH, 3);
+                            calendar.set(Calendar.DAY_OF_MONTH, 17);
+                            calendar.set(Calendar.MONTH, 8);
                             List<Entry> entries = entryData.getEntryByDate(calendar);
-                            Entry entry = entries.get(0);
-                            sendMsg(message, "Календарь: " + calendar.toString() +
-                                       " Число человек:" + entry.getCount() +
-                                        " Время " + entry.getTime() +
-                                            " Заметка " + entry.getNotes() +
-                                            " Сделана " + entry.getMadeBy());
+                            for (Entry entry: entries) {
+                                sendMsg(message,
+                                        "Время: " + entry.getTime() +
+                                                "\nЧисло человек: " + entry.getCount() +
+                                                "\nСтоимость: " + entry.getCost() +
+                                                "\nПримечание: " + entry.getNotes() +
+                                                "\nСделана: " + entry.getMadeBy() +
+                                                "\nКогда была добавлена " + entry.getCreationTime().toString() +
+                                                "\nID: " + entry.getId());
+                            }
                             break;
                         case "Удалить запись":
 

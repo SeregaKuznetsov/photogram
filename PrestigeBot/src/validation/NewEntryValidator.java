@@ -19,7 +19,7 @@ public class NewEntryValidator {
     }
 
     public Entry getEntryFromMsg(String textMsg, String userName) {
-        String[] arrayMessage = textMsg.split(",",4);
+        String[] arrayMessage = textMsg.split(",",5);
 
         String[] dayAndMounth = arrayMessage[0].split("\\.",2);
         Calendar calendar = new GregorianCalendar();
@@ -27,13 +27,19 @@ public class NewEntryValidator {
         calendar.set(Calendar.MONTH, Integer.parseInt(dayAndMounth[1].trim()));
 
         Entry entry = new Entry();
-        for (String msg: arrayMessage) {
-            System.out.println(msg);
-        }
+//        for (String msg: arrayMessage) {
+//            System.out.println(msg);
+//        }
+
         entry.setDate(calendar);
         entry.setCount(Integer.parseInt(arrayMessage[1].trim()));
         entry.setTime(arrayMessage[2].trim());
-        entry.setNotes(arrayMessage[3]);
+        entry.setCost(arrayMessage[3]);
+        if (arrayMessage.length < 5 || arrayMessage[4].isEmpty()) {
+            entry.setNotes("Отсутcтвует");
+        } else {
+            entry.setNotes(arrayMessage[4]);
+        }
         entry.setMadeBy(userName);
         return entry;
     }

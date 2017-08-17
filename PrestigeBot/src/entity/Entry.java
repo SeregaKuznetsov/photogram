@@ -9,12 +9,30 @@ import java.util.List;
  */
 public class Entry {
 
+    private long id;
     private Calendar date;
     private String time;
     private int count;
-    private int cost;
+    private String cost;
     private String notes;
     private String madeBy;
+    private Date creationTime;
+
+    public Date getCreationTime() {
+        return creationTime;
+    }
+
+    public void setCreationTime(Date creationTime) {
+        this.creationTime = creationTime;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public Calendar getDate() {
         return date;
@@ -49,11 +67,11 @@ public class Entry {
         this.count = count;
     }
 
-    public int getCost() {
+    public String getCost() {
         return cost;
     }
 
-    public void setCost(int cost) {
+    public void setCost(String cost) {
         this.cost = cost;
     }
 
