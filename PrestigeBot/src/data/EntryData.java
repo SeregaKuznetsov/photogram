@@ -43,4 +43,14 @@ public class EntryData {
     public boolean find(Entry entry) {
         return entries.contains(entry);
     }
+
+    public List<Entry> getAllEntries() {
+        entries.sort(new Comparator<Entry>() {
+            @Override
+            public int compare(Entry o1, Entry o2) {
+                return o1.getDate().compareTo(o2.getDate());
+            }
+        });
+        return entries;
+    }
 }

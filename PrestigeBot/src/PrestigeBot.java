@@ -16,8 +16,10 @@ import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
+import validation.DeleteEntryValidator;
 import validation.NewEntryValidator;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -30,7 +32,10 @@ public class PrestigeBot extends TelegramLongPollingBot {
     private UserData userDataBase = new UserData();
     private MessageData messageData = new MessageData();
     private NewEntryValidator newEntryValidator = new NewEntryValidator();
+    private DeleteEntryValidator deleteEntryValidator = new DeleteEntryValidator();
     private EntryData entryData = new EntryData();
+    private SimpleDateFormat format1 = new SimpleDateFormat("dd MMMMM yy EEEEEEEEEEEE");
+    private SimpleDateFormat format2 = new SimpleDateFormat("dd.MM.yy");
 
 
     {
@@ -81,6 +86,8 @@ public class PrestigeBot extends TelegramLongPollingBot {
                     entryData.add(entry);
                     messageData.delete(userId);
                     sendMsg(message, "Запись сохранена(Сделать валидацию)");
+                } else if (action.equals("Удалить запись")) {
+                    DeleteEntryValidator.deleteEntryFromMsg(textMsg);
                 }
             } else
             //Если пользователь зарегистрирован
@@ -96,23 +103,26 @@ public class PrestigeBot extends TelegramLongPollingBot {
                             waitForMessage(userId, textMsg);
                             break;
                         case "Посмотреть записи":
-                            Calendar calendar = new GregorianCalendar();
-                            calendar.set(Calendar.DAY_OF_MONTH, 17);
-                            calendar.set(Calendar.MONTH, 8);
-                            List<Entry> entries = entryData.getEntryByDate(calendar);
+                            List<Entry> entries = entryData.getAllEntries();
                             for (Entry entry: entries) {
                                 sendMsg(message,
-                                        "Время: " + entry.getTime() +
+                                        "Дата: " + format1.format(entry.getDate().getTime()) +
+                                                "\nВремя: " + entry.getTime() +
                                                 "\nЧисло человек: " + entry.getCount() +
                                                 "\nСтоимость: " + entry.getCost() +
                                                 "\nПримечание: " + entry.getNotes() +
                                                 "\nСделана: " + entry.getMadeBy() +
-                                                "\nКогда была добавлена " + entry.getCreationTime().toString() +
+                                                "\nКогда была добавлена " + format2.format(entry.getCreationTime()) +
                                                 "\nID: " + entry.getId());
                             }
                             break;
                         case "Удалить запись":
-
+                                sendMsg(message, "Вы можете удалить записи +" +
+                                        "\nПо ID - например: 3 или 4,1,3" +
+                                        "\nВсе записи по дате - например: 02.03.17" +
+                                        "\nВсе записи по автору - например: Serega Kuznetsov" +
+                                        "\nУдалить все записи - delete all");
+                                waitForMessage(userId, textMsg);
                             break;
                         case "Документы":
 
