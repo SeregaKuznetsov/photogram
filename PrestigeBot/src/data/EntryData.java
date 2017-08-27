@@ -8,7 +8,7 @@ import java.util.*;
  * Created by Sergey on 16.08.2017.
  */
 public class EntryData {
-    private List<Entry> entries = new ArrayList<>();
+    private static List<Entry> entries = new ArrayList<>();
     private static long i = 1;
 
     public void add(Entry entry) {
@@ -22,13 +22,38 @@ public class EntryData {
         entries.remove(entry);
     }
 
-    public void deleteEntryById(int id) {
+    public void deleteAll() {
+        entries.removeAll(entries);
+    }
+
+
+    public boolean deleteEntryById(int id) {
         for (Entry entry : entries) {
             if (entry.getId() == id) {
                 entries.remove(entry);
-                break;
+                return true;
             }
         }
+        return false;
+    }
+
+    public void DeleteEntryByDate(Calendar calendar) {
+        List<Entry> listToRemove = new ArrayList<>();
+        for (Entry entry : entries) {
+            if (entry.getDate().get(Calendar.DAY_OF_YEAR) == (calendar.get(Calendar.DAY_OF_YEAR)))
+                listToRemove.add(entry);
+        }
+
+        entries.removeAll(listToRemove);
+    }
+
+    public void DeleteEntryByName(String name) {
+        List<Entry> listToRemove = new ArrayList<>();
+        for (Entry entry : entries) {
+            if (entry.getMadeBy().equals(name))
+                listToRemove.add(entry);
+        }
+        entries.removeAll(listToRemove);
     }
 
     public List<Entry> getEntryByDate(Calendar calendar) {

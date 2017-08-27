@@ -12,12 +12,6 @@ import java.util.regex.Pattern;
  */
 public class NewEntryValidator {
 
-    public boolean validate(String textMsg) {
-        Pattern p = Pattern.compile(".+\\.(com|ua|ru)");
-        Matcher m = p.matcher(textMsg);
-        return m.matches();
-    }
-
     public Entry getEntryFromMsg(String textMsg, String userName) {
         String[] arrayMessage = textMsg.split(",",5);
 

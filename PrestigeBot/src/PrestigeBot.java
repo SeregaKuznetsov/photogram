@@ -84,10 +84,13 @@ public class PrestigeBot extends TelegramLongPollingBot {
                     Entry entry = newEntryValidator.getEntryFromMsg(textMsg, message.getFrom().getFirstName() +
                             " " + message.getFrom().getLastName());
                     entryData.add(entry);
+                    // Удаление из очереди сообщений
                     messageData.delete(userId);
                     sendMsg(message, "Запись сохранена(Сделать валидацию)");
                 } else if (action.equals("Удалить запись")) {
-                    DeleteEntryValidator.deleteEntryFromMsg(textMsg);
+                    String answer = deleteEntryValidator.deleteEntryFromMsg(textMsg);
+                    sendMsg(message, answer);
+                    messageData.delete(userId);
                 }
             } else
             //Если пользователь зарегистрирован
@@ -104,28 +107,34 @@ public class PrestigeBot extends TelegramLongPollingBot {
                             break;
                         case "Посмотреть записи":
                             List<Entry> entries = entryData.getAllEntries();
-                            for (Entry entry: entries) {
-                                sendMsg(message,
-                                        "Дата: " + format1.format(entry.getDate().getTime()) +
-                                                "\nВремя: " + entry.getTime() +
-                                                "\nЧисло человек: " + entry.getCount() +
-                                                "\nСтоимость: " + entry.getCost() +
-                                                "\nПримечание: " + entry.getNotes() +
-                                                "\nСделана: " + entry.getMadeBy() +
-                                                "\nКогда была добавлена " + format2.format(entry.getCreationTime()) +
-                                                "\nID: " + entry.getId());
+                            if (entries.isEmpty()) {
+                                sendMsg(message, "Записи отсутствуют");
+                            } else {
+                                sendMsg(message, "Записи отсортированы по дате");
+                                for (Entry entry : entries) {
+                                    sendMsg(message,
+                                            "Дата: " + format1.format(entry.getDate().getTime()) +
+                                                    "\nВремя: " + entry.getTime() +
+                                                    "\nЧисло человек: " + entry.getCount() +
+                                                    "\nСтоимость: " + entry.getCost() +
+                                                    "\nПримечание: " + entry.getNotes() +
+                                                    "\nСделана: " + entry.getMadeBy() +
+                                                    "\nКогда была добавлена " + format2.format(entry.getCreationTime()) +
+                                                    "\nID: " + entry.getId());
+                                }
                             }
                             break;
                         case "Удалить запись":
-                                sendMsg(message, "Вы можете удалить записи +" +
-                                        "\nПо ID - например: 3 или 4,1,3" +
+                                sendMsg(message, "Вы можете удалить записи:" +
+                                        "\nПо ID - например: 3 или 4,1,33" +
                                         "\nВсе записи по дате - например: 02.03.17" +
                                         "\nВсе записи по автору - например: Serega Kuznetsov" +
                                         "\nУдалить все записи - delete all");
                                 waitForMessage(userId, textMsg);
                             break;
                         case "Документы":
-
+                            sendMsg(message, "Сюда можно будет добавить скрины документов," +
+                                    " чтобы под рукой были, ну или что нибудь еще");
                             break;
                         default:
                             sendMsg(message, "Привет, хозяин!");
@@ -144,18 +153,22 @@ public class PrestigeBot extends TelegramLongPollingBot {
                         case "Владелец":
                             currentUser.setRole(OWNER);
                             sendMsg(message, "Вы зарегистрированы как владелец");
+                            showMenu(currentUser.getRole(), message);
                             break;
                         case "Администратор":
                             currentUser.setRole(ADMIN);
                             sendMsg(message, "Вы зарегистрированы как администротор");
+                            showMenu(currentUser.getRole(), message);
                             break;
                         case "Сотрудник":
                             currentUser.setRole(WORKER);
                             sendMsg(message, "Вы зарегистрированы как работник");
+                            showMenu(currentUser.getRole(), message);
                             break;
                         case "Клиент":
                             currentUser.setRole(CLIENT);
                             sendMsg(message, "Вы зарегистрированы как клиент");
+                            showMenu(currentUser.getRole(), message);
                             break;
                         default:
                             showRegistrateKeyboard(message);
