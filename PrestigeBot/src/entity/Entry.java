@@ -1,5 +1,6 @@
 package entity;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -17,6 +18,20 @@ public class Entry {
     private String notes;
     private String madeBy;
     private Date creationTime;
+    private String status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+
+
+    private SimpleDateFormat format1 = new SimpleDateFormat("dd MMMMM yy EEEEEEEEEEEE");
+    private SimpleDateFormat format2 = new SimpleDateFormat("dd.MM.yy");
 
     public Date getCreationTime() {
         return creationTime;
@@ -81,5 +96,16 @@ public class Entry {
 
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    public String entryToString(Entry entry) {
+        return "Дата: " + format1.format(entry.getDate().getTime()) +
+                "\nВремя: " + entry.getTime() +
+                "\nЧисло человек: " + entry.getCount() +
+                "\nСтоимость: " + entry.getCost() +
+                "\nПримечание: " + entry.getNotes() +
+                "\nСделана: " + entry.getMadeBy() +
+                "\nКогда была добавлена " + format2.format(entry.getCreationTime()) +
+                "\nID: " + entry.getId();
     }
 }

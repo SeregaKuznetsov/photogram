@@ -5,12 +5,21 @@ package entity;
  */
 public class User {
     private int id;
+    private long chatid;
     private String name;
     private String lasName;
     private Role role;
 
     public Role getRole() {
         return role;
+    }
+
+    public long getChatid() {
+        return chatid;
+    }
+
+    public void setChatid(long chatid) {
+        this.chatid = chatid;
     }
 
     public void setRole(Role role) {
@@ -25,11 +34,12 @@ public class User {
         this.id = id;
     }
 
-    public User(int id, String name, String lasName, Role role) {
+    public User(int id, String name, String lasName, Role role, long chatid) {
         this.id = id;
         this.name = name;
         this.lasName = lasName;
         this.role = role;
+        this.chatid = chatid;
     }
 
     public User(int id, String name, String lasName) {

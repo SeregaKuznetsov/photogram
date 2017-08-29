@@ -1,5 +1,6 @@
 package data;
 
+import entity.Role;
 import entity.User;
 
 import java.util.ArrayList;
@@ -13,6 +14,15 @@ public class UserData {
 
     public List<User> getAllUsers() {
         return users;
+    }
+    public List<User> getAllWorkers() {
+        ArrayList<User> workers = new ArrayList<>();
+        for (User user: users) {
+            if (user.getRole() == Role.WORKER) {
+                workers.add(user);
+            }
+        }
+        return workers;
     }
     public void addNewUser(User user) {
         users.add(user);

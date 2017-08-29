@@ -34,8 +34,6 @@ public class PrestigeBot extends TelegramLongPollingBot {
     private NewEntryValidator newEntryValidator = new NewEntryValidator();
     private DeleteEntryValidator deleteEntryValidator = new DeleteEntryValidator();
     private EntryData entryData = new EntryData();
-    private SimpleDateFormat format1 = new SimpleDateFormat("dd MMMMM yy EEEEEEEEEEEE");
-    private SimpleDateFormat format2 = new SimpleDateFormat("dd.MM.yy");
 
 
     {
@@ -87,6 +85,8 @@ public class PrestigeBot extends TelegramLongPollingBot {
                     // Удаление из очереди сообщений
                     messageData.delete(userId);
                     sendMsg(message, "Запись сохранена(Сделать валидацию)");
+                    alertWorkers(entry);
+                    sendMsg(message, "Работники уведомлены о новой записи");
                 } else if (action.equals("Удалить запись")) {
                     String answer = deleteEntryValidator.deleteEntryFromMsg(textMsg);
                     sendMsg(message, answer);
@@ -105,22 +105,14 @@ public class PrestigeBot extends TelegramLongPollingBot {
                             sendMsg(message, "Например так: 02.03, 4, 15:45, 2000, нужна белая лошадь");
                             waitForMessage(userId, textMsg);
                             break;
-                        case "Посмотреть записи":
-                            List<Entry> entries = entryData.getAllEntries();
+                        case "Активные записи":
+                            List<Entry> entries = entryData.getActiveEntries();
                             if (entries.isEmpty()) {
                                 sendMsg(message, "Записи отсутствуют");
                             } else {
                                 sendMsg(message, "Записи отсортированы по дате");
                                 for (Entry entry : entries) {
-                                    sendMsg(message,
-                                            "Дата: " + format1.format(entry.getDate().getTime()) +
-                                                    "\nВремя: " + entry.getTime() +
-                                                    "\nЧисло человек: " + entry.getCount() +
-                                                    "\nСтоимость: " + entry.getCost() +
-                                                    "\nПримечание: " + entry.getNotes() +
-                                                    "\nСделана: " + entry.getMadeBy() +
-                                                    "\nКогда была добавлена " + format2.format(entry.getCreationTime()) +
-                                                    "\nID: " + entry.getId());
+                                    sendMsg(message, entry.entryToString(entry));
                                 }
                             }
                             break;
@@ -135,6 +127,28 @@ public class PrestigeBot extends TelegramLongPollingBot {
                         case "Документы":
                             sendMsg(message, "Сюда можно будет добавить скрины документов," +
                                     " чтобы под рукой были, ну или что нибудь еще");
+                            break;
+                        case "Закрытые записи":
+                            List<Entry> closeEntries = entryData.getCloseEntries();
+                            if (closeEntries.isEmpty()) {
+                                sendMsg(message, "Записи отсутствуют");
+                            } else {
+                                sendMsg(message, "Записи отсортированы по дате");
+                                for (Entry entry : closeEntries) {
+                                    sendMsg(message, entry.entryToString(entry));
+                                }
+                            }
+                            break;
+                        case "О компании":
+                            sendMsg(message, "Сюда можно вывести информацию о колличесве сотрудников, " +
+                                    "загестрированных клинетах");
+                            break;
+                        case "Рассылка":
+                            sendMsg(message, "Здесь будет доступна рассылка всем работникам/клиентам/админам");
+                            break;
+                        case "Добавить сотрудника":
+                            sendMsg(message, "Здесь можно будет сгенерировать уникальный, одноразовый ключ для " +
+                                    "добавления новых сотрудников");
                             break;
                         default:
                             sendMsg(message, "Привет, хозяин!");
@@ -184,6 +198,21 @@ public class PrestigeBot extends TelegramLongPollingBot {
        }
     }
 
+    private void alertWorkers(Entry entry) {
+        List<User> workers = userDataBase.getAllWorkers();
+        for (User worker: workers) {
+            SendMessage sendMessage = new SendMessage();
+            sendMessage.setChatId(worker.getChatid());
+            sendMessage.setText(entry.entryToString(entry));
+            sendMessage.enableMarkdown(true);
+            try {
+                sendMessage(sendMessage);
+            } catch (TelegramApiException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     private boolean waitingForMessage(int from) {
         return messageData.find(from);
     }
@@ -221,6 +250,35 @@ public class PrestigeBot extends TelegramLongPollingBot {
     }
 
     private void showWorkerMenu(Message message) {
+        SendMessage sendMessage = new SendMessage()
+                .setChatId(message.getChatId())
+                .setText("Что бы вы хотели сделать?");
+        // Create ReplyKeyboardMarkup object
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        // Create the keyboard (list of keyboard rows)
+        List<KeyboardRow> keyboard = new ArrayList<>();
+        // Create a keyboard row
+        KeyboardRow row1 = new KeyboardRow();
+        KeyboardRow row2 = new KeyboardRow();
+        KeyboardRow row3 = new KeyboardRow();
+        KeyboardRow row4 = new KeyboardRow();
+        // Set each button, you can also use KeyboardButton objects if you need something else than text
+        row2.add("Посмотреть записи");
+        row3.add("Закрыть запись");
+        // Add the first row to the keyboard
+        keyboard.add(row2);
+        keyboard.add(row3);
+        // Set the keyboard to the markup
+        keyboardMarkup.setKeyboard(keyboard);
+        keyboardMarkup.setOneTimeKeyboard(true);
+
+        // Add it to the message
+        sendMessage.setReplyMarkup(keyboardMarkup);
+        try {
+            sendMessage(sendMessage); // Sending our message object to user
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
     }
 
     private void showAdminMenu(Message message) {
@@ -239,16 +297,22 @@ public class PrestigeBot extends TelegramLongPollingBot {
         KeyboardRow row2 = new KeyboardRow();
         KeyboardRow row3 = new KeyboardRow();
         KeyboardRow row4 = new KeyboardRow();
+        KeyboardRow row5 = new KeyboardRow();
+        KeyboardRow row6 = new KeyboardRow();
         // Set each button, you can also use KeyboardButton objects if you need something else than text
         row1.add("Добавить запись");
-        row2.add("Посмотреть записи");
-        row3.add("Удалить запись");
-        row4.add("Документы");
+        row2.add("Активные записи");
+        row3.add("Закрытые записи");
+        row4.add("Удалить запись");
+        row5.add("Документы");
+        row6.add("О компании");
         // Add the first row to the keyboard
         keyboard.add(row1);
         keyboard.add(row2);
         keyboard.add(row3);
         keyboard.add(row4);
+        keyboard.add(row5);
+        keyboard.add(row6);
         // Set the keyboard to the markup
         keyboardMarkup.setKeyboard(keyboard);
         keyboardMarkup.setOneTimeKeyboard(true);
@@ -305,9 +369,10 @@ public class PrestigeBot extends TelegramLongPollingBot {
         org.telegram.telegrambots.api.objects.User tellUser;
         tellUser = message.getFrom();
         int id = tellUser.getId();
+        long chatId = message.getChatId();
         String name = tellUser.getFirstName();
         String lastName = tellUser.getLastName();
-        User myUser = new User(id, name, lastName, ANONIMUS);
+        User myUser = new User(id, name, lastName, ANONIMUS, chatId);
         userDataBase.addNewUser(myUser);
 
     }

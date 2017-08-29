@@ -78,4 +78,22 @@ public class EntryData {
         });
         return entries;
     }
+
+    public List<Entry> getActiveEntries() {
+        List<Entry> listToRemove = new ArrayList<>();
+        for (Entry entry : entries) {
+            if (entry.getStatus().equals("active"))
+                listToRemove.add(entry);
+        }
+        return listToRemove;
+    }
+
+    public List<Entry> getCloseEntries() {
+        List<Entry> listToRemove = new ArrayList<>();
+        for (Entry entry : entries) {
+            if (entry.getStatus().equals("close"))
+                listToRemove.add(entry);
+        }
+        return listToRemove;
+    }
 }

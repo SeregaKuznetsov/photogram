@@ -25,6 +25,7 @@ public class NewEntryValidator {
 //            System.out.println(msg);
 //        }
 
+        entry.setStatus("active");
         entry.setDate(calendar);
         entry.setCount(Integer.parseInt(arrayMessage[1].trim()));
         entry.setTime(arrayMessage[2].trim());
