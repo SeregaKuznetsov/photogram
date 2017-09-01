@@ -42,10 +42,11 @@ public class User {
         this.chatid = chatid;
     }
 
-    public User(int id, String name, String lasName) {
+    public User(int id, String name, String lasName, Role role) {
         this.id = id;
         this.name = name;
         this.lasName = lasName;
+        this.role = role;
     }
 
     public String getName() {

@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class EntryData {
     private static List<Entry> entries = new ArrayList<>();
-    private static long i = 1;
+    private static long i = 0;
 
     public void add(Entry entry) {
         i++;
@@ -69,7 +69,7 @@ public class EntryData {
         return entries.contains(entry);
     }
 
-    public List<Entry> getAllEntries() {
+    private List<Entry> sortByDate(List<Entry> entries) {
         entries.sort(new Comparator<Entry>() {
             @Override
             public int compare(Entry o1, Entry o2) {
@@ -85,7 +85,7 @@ public class EntryData {
             if (entry.getStatus().equals("active"))
                 listToRemove.add(entry);
         }
-        return listToRemove;
+        return sortByDate(listToRemove);
     }
 
     public List<Entry> getCloseEntries() {
@@ -94,6 +94,10 @@ public class EntryData {
             if (entry.getStatus().equals("close"))
                 listToRemove.add(entry);
         }
-        return listToRemove;
+        return sortByDate(listToRemove);
+    }
+
+    public Entry getEntryById(int entryId) {
+        return entries.get(entryId);
     }
 }

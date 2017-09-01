@@ -16,8 +16,12 @@ import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
+import security.Key;
+import security.KeyGenerator;
+import validation.CloseEntryValidator;
 import validation.DeleteEntryValidator;
 import validation.NewEntryValidator;
+import validation.NewUserValidator;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -31,16 +35,22 @@ public class PrestigeBot extends TelegramLongPollingBot {
 
     private UserData userDataBase = new UserData();
     private MessageData messageData = new MessageData();
+    private EntryData entryData = new EntryData();
+
     private NewEntryValidator newEntryValidator = new NewEntryValidator();
     private DeleteEntryValidator deleteEntryValidator = new DeleteEntryValidator();
-    private EntryData entryData = new EntryData();
+    private CloseEntryValidator closeEntryValidator = new CloseEntryValidator();
+    private NewUserValidator newUserValidator = new NewUserValidator();
+
+    private KeyGenerator keyGenerator = new KeyGenerator();
+
 
 
     {
-        //User sergey = new User(273255483, "Sergey", "Kuznetsov", Role.OWNER);
+        User sergey = new User(273255483, "Sergey", "Kuznetsov", Role.OWNER);
         //User sergey2 = new User(273255483, "Sergey", "Kuznetsov", Role.ADMIN);
 
-        //userDataBase.addNewUser(sergey);
+        userDataBase.addNewUser(sergey);
     }
 
     public static void main(String[] args) {
@@ -76,28 +86,45 @@ public class PrestigeBot extends TelegramLongPollingBot {
                 sendMsg(message, "Привет, я робот");
             }
 
-            if (waitingForMessage(userId)) {
-                String action = messageData.getValue(userId);
-                if (action.equals("Добавить запись")) {
-                    Entry entry = newEntryValidator.getEntryFromMsg(textMsg, message.getFrom().getFirstName() +
-                            " " + message.getFrom().getLastName());
-                    entryData.add(entry);
-                    // Удаление из очереди сообщений
-                    messageData.delete(userId);
-                    sendMsg(message, "Запись сохранена(Сделать валидацию)");
-                    alertWorkers(entry);
-                    sendMsg(message, "Работники уведомлены о новой записи");
-                } else if (action.equals("Удалить запись")) {
-                    String answer = deleteEntryValidator.deleteEntryFromMsg(textMsg);
-                    sendMsg(message, answer);
-                    messageData.delete(userId);
-                }
-            } else
             //Если пользователь зарегистрирован
             if (hasRegistered(userId)) {
                 User currentUser = userDataBase.getUserById(userId);
 
-                if (currentUser.getRole().equals(OWNER)) {
+                //Если ждем уточняющего сообщения от пользователя
+                if (waitingForMessage(userId)) {
+                    String action = messageData.getValue(userId);
+                    String answer;
+                    switch (action) {
+                        case "Добавить запись":
+                            Entry entry = newEntryValidator.getEntryFromMsg(textMsg, currentUser.getName() +
+                                    " " + currentUser.getLasName());
+                            entryData.add(entry);
+                            // Удаление из очереди сообщений
+                            messageData.delete(userId);
+                            sendMsg(message, "Запись сохранена(Сделать валидацию)");
+                            alertWorkers(entry);
+                            sendMsg(message, "Работники уведомлены о новой записи");
+                            break;
+                        case "Удалить запись":
+                            answer = deleteEntryValidator.deleteEntryFromMsg(textMsg);
+                            messageData.delete(userId);
+                            sendMsg(message, answer);
+                            break;
+                        case "Закрыть запись":
+                            answer = closeEntryValidator.closeEntry(textMsg);
+                            messageData.delete(userId);
+                            sendMsg(message, answer);
+                            break;
+                        case "Добавить сотрудника":
+                            Key key = newUserValidator.getKeyForNewUser(textMsg);
+                            messageData.delete(userId);
+                            sendMsg(message, "Отправте одноразовый ключ сотруднику, время действия ключа:" +
+                                    " " + key.liveTime + " секунд");
+                            sendMsg(message, key.getKey());
+                            break;
+                    }
+                }
+                else if (currentUser.getRole().equals(OWNER)) {
                     switch (textMsg) {
                         case "Добавить запись":
                             sendMsg(message, "Пожалуйста введите информацию в формате дд.мм, колличество человек, чч:мм," +
@@ -147,8 +174,9 @@ public class PrestigeBot extends TelegramLongPollingBot {
                             sendMsg(message, "Здесь будет доступна рассылка всем работникам/клиентам/админам");
                             break;
                         case "Добавить сотрудника":
-                            sendMsg(message, "Здесь можно будет сгенерировать уникальный, одноразовый ключ для " +
-                                    "добавления новых сотрудников");
+                            sendMsg(message, "Выберите роль нового пользователя");
+                            waitForMessage(userId, textMsg);
+                            showRegistrateKeyboard(message);
                             break;
                         default:
                             sendMsg(message, "Привет, хозяин!");
@@ -159,7 +187,16 @@ public class PrestigeBot extends TelegramLongPollingBot {
                 } else if (currentUser.getRole().equals(ADMIN)) {
                     sendMsg(message, "Привет, админ!");
                 } else if (currentUser.getRole().equals(WORKER)) {
-                    sendMsg(message, "Привет, работник!");
+                    switch (textMsg) {
+                        case "Закрыть запись":
+                            sendMsg(message, "Вы можете закрыть запись только после времени ее начала");
+                            sendMsg(message, "Введите ID записи - например: 3");
+                            waitForMessage(userId, textMsg);
+                            break;
+                        default:
+                            sendMsg(message, "Привет, работник!");
+                    }
+
                 } else if (currentUser.getRole().equals(CLIENT)) {
                     sendMsg(message, "Привет, клиент!");
                 } else if (currentUser.getRole().equals(ANONIMUS)) {
@@ -299,6 +336,8 @@ public class PrestigeBot extends TelegramLongPollingBot {
         KeyboardRow row4 = new KeyboardRow();
         KeyboardRow row5 = new KeyboardRow();
         KeyboardRow row6 = new KeyboardRow();
+        KeyboardRow row7 = new KeyboardRow();
+        KeyboardRow row8 = new KeyboardRow();
         // Set each button, you can also use KeyboardButton objects if you need something else than text
         row1.add("Добавить запись");
         row2.add("Активные записи");
@@ -306,6 +345,8 @@ public class PrestigeBot extends TelegramLongPollingBot {
         row4.add("Удалить запись");
         row5.add("Документы");
         row6.add("О компании");
+        row7.add("Рассылка");
+        row8.add("Добавить сотрудника");
         // Add the first row to the keyboard
         keyboard.add(row1);
         keyboard.add(row2);
@@ -313,6 +354,8 @@ public class PrestigeBot extends TelegramLongPollingBot {
         keyboard.add(row4);
         keyboard.add(row5);
         keyboard.add(row6);
+        keyboard.add(row7);
+        keyboard.add(row8);
         // Set the keyboard to the markup
         keyboardMarkup.setKeyboard(keyboard);
         keyboardMarkup.setOneTimeKeyboard(true);
@@ -329,7 +372,7 @@ public class PrestigeBot extends TelegramLongPollingBot {
     private void showRegistrateKeyboard(Message message) {
         SendMessage sendMessage = new SendMessage()
                 .setChatId(message.getChatId())
-                .setText("Пожалуйста, представтесь");
+                .setText("Выберите роль нового сотрудника");
         // Create ReplyKeyboardMarkup object
         ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
         // Create the keyboard (list of keyboard rows)
@@ -364,15 +407,13 @@ public class PrestigeBot extends TelegramLongPollingBot {
 
     private void registrate(Message message) {
 
-        showRegistrateKeyboard(message);
-
         org.telegram.telegrambots.api.objects.User tellUser;
         tellUser = message.getFrom();
         int id = tellUser.getId();
         long chatId = message.getChatId();
         String name = tellUser.getFirstName();
         String lastName = tellUser.getLastName();
-        User myUser = new User(id, name, lastName, ANONIMUS, chatId);
+        User myUser = new User(id, name, lastName, CLIENT, chatId);
         userDataBase.addNewUser(myUser);
 
     }

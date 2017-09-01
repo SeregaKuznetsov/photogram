@@ -19,6 +19,17 @@ public class Entry {
     private String madeBy;
     private Date creationTime;
     private String status;
+    private String comment;
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+
 
     public String getStatus() {
         return status;
