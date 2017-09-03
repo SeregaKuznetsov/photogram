@@ -17,6 +17,7 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
 import security.Key;
+import security.KeyData;
 import security.KeyGenerator;
 import validation.CloseEntryValidator;
 import validation.DeleteEntryValidator;
@@ -36,13 +37,12 @@ public class PrestigeBot extends TelegramLongPollingBot {
     private UserData userDataBase = new UserData();
     private MessageData messageData = new MessageData();
     private EntryData entryData = new EntryData();
+    private KeyData keyData = new KeyData();
 
     private NewEntryValidator newEntryValidator = new NewEntryValidator();
     private DeleteEntryValidator deleteEntryValidator = new DeleteEntryValidator();
     private CloseEntryValidator closeEntryValidator = new CloseEntryValidator();
     private NewUserValidator newUserValidator = new NewUserValidator();
-
-    private KeyGenerator keyGenerator = new KeyGenerator();
 
 
 
@@ -118,9 +118,21 @@ public class PrestigeBot extends TelegramLongPollingBot {
                         case "Добавить сотрудника":
                             Key key = newUserValidator.getKeyForNewUser(textMsg);
                             messageData.delete(userId);
-                            sendMsg(message, "Отправте одноразовый ключ сотруднику, время действия ключа:" +
-                                    " " + key.liveTime + " секунд");
-                            sendMsg(message, key.getKey());
+                            if (key != null) {
+                                sendMsg(message, "Отправте этот одноразовый ключ сотруднику, время действия ключа:" +
+                                        " " + key.liveTime + " секунд");
+                                sendMsg(message, key.getKey());
+                            } else {
+                                sendMsg(message, "Не верный формат роли, например: Сотрудник");
+                            }
+                            break;
+                        case "Ввести ключ":
+                            if (checkOnRegKey(textMsg) != null) {
+                                currentUser.setRole(checkOnRegKey(textMsg));
+                            } else {
+                                sendMsg(message, "Ключ не действителен");
+                            }
+                            messageData.delete(userId);
                             break;
                     }
                 }
@@ -198,8 +210,13 @@ public class PrestigeBot extends TelegramLongPollingBot {
                     }
 
                 } else if (currentUser.getRole().equals(CLIENT)) {
-                    sendMsg(message, "Привет, клиент!");
-                } else if (currentUser.getRole().equals(ANONIMUS)) {
+                    if (textMsg.equals("Ввести ключ")) {
+                        waitForMessage(userId, textMsg);
+                        sendMsg(message, "Просто введите ключ, который вам отправит администратор");
+                    } else {
+                        sendMsg(message, "Привет, клиент!");
+                    }
+                } /*else if (currentUser.getRole().equals(ANONIMUS)) {
                     switch (textMsg) {
                         case "Владелец":
                             currentUser.setRole(OWNER);
@@ -225,14 +242,18 @@ public class PrestigeBot extends TelegramLongPollingBot {
                             showRegistrateKeyboard(message);
                             break;
                     }
-                }
+                }*/
 
             }
             //Если пользователь еще не зарегистрирован
             else {
-                registrate(message);
+                registrate(message, CLIENT);
             }
        }
+    }
+
+    private Role checkOnRegKey(String textMsg) {
+        return keyData.getValuebyKeyCode(textMsg);
     }
 
     private void alertWorkers(Entry entry) {
@@ -405,7 +426,7 @@ public class PrestigeBot extends TelegramLongPollingBot {
         }
     }
 
-    private void registrate(Message message) {
+    private void registrate(Message message, Role role) {
 
         org.telegram.telegrambots.api.objects.User tellUser;
         tellUser = message.getFrom();
@@ -413,7 +434,7 @@ public class PrestigeBot extends TelegramLongPollingBot {
         long chatId = message.getChatId();
         String name = tellUser.getFirstName();
         String lastName = tellUser.getLastName();
-        User myUser = new User(id, name, lastName, CLIENT, chatId);
+        User myUser = new User(id, name, lastName, role, chatId);
         userDataBase.addNewUser(myUser);
 
     }
